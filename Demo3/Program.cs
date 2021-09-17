@@ -1,47 +1,43 @@
 ﻿using System;
 using System.Threading;
 
-
-namespace Demo2
+namespace Demo3
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int width = 40;
+            int width = 80;
             int height = 20;
+
+            Random rnd = new Random();
 
             InitializeWindow(width, height);
             DrawFrame(width, height);
 
+            // массив, в котором хранятся все наши точки
+            Point[] points = new Point[50];
 
-            Point p1 = new Point(20, 10, '@');
-            p1.Draw();
+            for (int i = 0; i < 50; i++)
+            {
+                Point p = new Point(rnd.Next(2,79), rnd.Next(2,19), '.');
+                points[i] = p;
+
+                points[i].Draw();
+            }
 
             while (true)
             {
-                if (p1.X < 1) p1.X = 1;
-                if (p1.X > width - 2) p1.X = width - 2;
-                if (p1.Y < 1) p1.Y = 1;
-                if (p1.Y > height - 2) p1.Y = height - 2;
-
-                switch (Console.ReadKey(true).Key)
+                //---------------------
+                for (int i = 0; i < 50; i++)
                 {
-                    case ConsoleKey.D:
-                        p1.MoveRight();
-                        break;
-                    case ConsoleKey.S:
-                        p1.MoveDown();
-                        break;
-                    case ConsoleKey.A:
-                        p1.MoveLeft();
-                        break;
-                    case ConsoleKey.W:
-                        p1.MoveUp();
-                        break;                    
+                    if (points[i].Y > height - 2) points[i].Y = 0;
+                    if (points[i].X > width - 2) points[i].X = 0;
+                    points[i].MoveRight();
                 }
-
+                //---------------------
                 Thread.Sleep(1);
+                Console.Clear();
             }
 
         }
@@ -67,7 +63,7 @@ namespace Demo2
             {
                 for (int i = 0; i < width; i++)
                 {
-                    if (j == 1 || j == heigth -1)
+                    if (j == 1 || j == heigth - 1)
                     {
                         Console.SetCursorPosition(i, j);
                         Console.Write('.');

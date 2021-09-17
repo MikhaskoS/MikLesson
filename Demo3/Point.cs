@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Demo2
+namespace Demo3
 {
     public class Point
     {
@@ -8,6 +8,7 @@ namespace Demo2
         public int X;
         public int Y;
         public char Symbol;
+        public int Speed;
 
         // конструктор
         public Point(int x, int y, char symbol)
