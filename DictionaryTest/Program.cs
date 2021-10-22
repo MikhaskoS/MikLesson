@@ -7,10 +7,13 @@ namespace DictionaryTest
         static void Main(string[] args)
         {
             // массивы
-            string[] rus = new[] { "грустный", "спокойный","активный","романтичный","дикий","уставший","веселый","злой"};
-            string[] deutsch = new[] { "traurig", "ruhig","aktiv","romantisch","wild", "mude","froh", "bose" };
-            Word[] words = new Word[rus.Length];
+            string[] rus = new[] { "чай", "какао", "кофе", "творог", "йогурт", "резать", "ветчина", "салат", "сыр", "рыба", "рис", "сок", "яблоко", "пирог" };
 
+
+
+            string[] deutsch = new[] {  };
+            
+            Word[] words = new Word[rus.Length];
             // заполняем массив
             for (int i = 0; i < words.Length; i++)
             {
