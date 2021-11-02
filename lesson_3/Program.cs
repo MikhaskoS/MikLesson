@@ -19,14 +19,15 @@ namespace lesson_3
 
 
 
-            Console.WriteLine(MyClass.F(29));
+            //Console.WriteLine(MyClass.F(29));
+            //Console.WriteLine($"a = {a} b = {b}");
+
+
+            a = 9;
+            b = 18;
+
+            MyClass.SuperSwap(ref a, ref b);
             Console.WriteLine($"a = {a} b = {b}");
-
-            
-
-           
-
-            
         }
     }
 }

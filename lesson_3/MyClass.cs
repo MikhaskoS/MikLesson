@@ -13,8 +13,15 @@ namespace lesson_3
             int t = a;
             a = b;
             b = t;
-        }                                                  
-    
+        }
+
+        public static void SuperSwap(ref int a, ref int b)
+        {
+            a = a - b;
+            b = a + b;
+            a = b - a;
+        }
+
         /// <summary>
         /// сумма чисел
         /// </summary>

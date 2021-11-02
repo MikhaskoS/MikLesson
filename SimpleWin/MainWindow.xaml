@@ -1,0 +1,26 @@
+﻿<Window x:Class="SimpleWin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleWin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="182" Width="318" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Left" Width="318">
+
+        <TextBox x:Name="valA" HorizontalAlignment="Left" Margin="39,22,0,0" Text="" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="120" 
+                 FontFamily="Baskerville Old Face" Background="#FFFFB6B6" Height="16"/>
+
+        <TextBox x:Name="valB" HorizontalAlignment="Left" Margin="39,52,0,0" Text="" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="120" 
+                 FontFamily="Baskerville Old Face" Background="#FFFFB6B6" Height="16"/>
+
+        <TextBlock x:Name="valResC" HorizontalAlignment="Left" Margin="176,41,0,0" Text="" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="120" 
+                 FontFamily="Baskerville Old Face" Background="#FFB6FFE8" Height="16"/>
+        
+        <Button Content="Вычислить" HorizontalAlignment="Center" Margin="0,92,0,0" VerticalAlignment="Top" Width="169" Height="33" 
+                Click="Button_Click"/>
+    </Grid>
+</Window>
